@@ -52,5 +52,8 @@ public class FindFlightsTests
         driver.WaitingForElement(titlePage, titlePageSelector);
         
         Assert.Contains(titlePage, driver.FindElement(titlePageSelector).Text);
+
+        // Cleanup
+        driver.Quit();
     }
 }
