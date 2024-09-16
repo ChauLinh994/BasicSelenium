@@ -1,0 +1,7 @@
+﻿/.idea/.idea.BasicSelenium/.idea/.gitignore
+/.idea/.idea.BasicSelenium/.idea/encodings.xml
+/.idea/.idea.BasicSelenium/.idea/indexLayout.xml
+/BasicSelenium/bin
+/BasicSelenium/obj
+/BasicSelenium.Common/bin
+/BasicSelenium.Common/obj
