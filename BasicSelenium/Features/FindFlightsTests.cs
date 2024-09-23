@@ -3,19 +3,32 @@ using OpenQA.Selenium;
 
 namespace BasicSelenium.Features;
 
+public class ABC
+{
+    
+}
+
 public class FindFlightsTests
 {
+    private const string Url = "https://blazedemo.com/";
+    // Step 1: Create a new instance of the Chrome driver
+    // var driver = ChromeDriverCore.CreateDriver();
+    
+    // Step 2: Find the element by CSS Selector/Id/ClassName/Tag
+    
+    
+    
+    
     [Fact]
     public async Task FindFlights_PageShow_ExpectedResult()
     {
-        var driver = ChromeDriverCore.CreateDriver();
-
-        await Task.Delay(2000);
+        // Create a new instance of the Chrome driver
+        var driver = ChromeDriverCore.CreateDriver(Url);
 
         // Check if the title contains "BlazeDemo"
         Assert.Contains("BlazeDemo", driver.Title);
         
-        // Check if findFlightsButton is not null
+        // Check if findFlightsButton is showed
         var findFlightsButton = driver.FindElement(By.CssSelector("body > div.container > form > div > input"));
         Assert.NotNull(findFlightsButton);
         
@@ -41,7 +54,7 @@ public class FindFlightsTests
         string titlePage = "Flights from Paris to Buenos Aires:";
         By titlePageSelector = By.CssSelector("body > div.container > h3");
         
-        var driver = ChromeDriverCore.CreateDriver();
+        var driver = ChromeDriverCore.CreateDriver(Url);
         
         await Task.Delay(2000);
 
