@@ -6,10 +6,8 @@ namespace BasicSelenium.Common.Infrastructures;
 
 public static class ChromeDriverCore
 {
-    public static ChromeDriver CreateDriver()
+    public static ChromeDriver CreateDriver(string url)
     {
-        string url = "https://blazedemo.com/";
-        
         // Create an instance of the Chrome driver
         ChromeOptions options = new ChromeOptions();
         var serviceChrome = ChromeDriverService.CreateDefaultService();
@@ -22,7 +20,7 @@ public static class ChromeDriverCore
         // Navigate to the URL
         driver.Navigate().GoToUrl(url);
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-        wait.Until(driver => driver.FindElement(By.CssSelector("body > div.container > form > div > input")));
+        wait.Until(driver => driver.FindElement(By.ClassName("login_logo")));
 
         return driver;
     }
