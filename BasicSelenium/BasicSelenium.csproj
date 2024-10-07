@@ -22,11 +22,16 @@
 
     <ItemGroup>
       <Folder Include="Extensions\" />
-      <Folder Include="Services\" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\BasicSelenium.Common\BasicSelenium.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Resources\UserInformations.xlsx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>
